@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import '../providers/cart.dart';
 import '../providers/products.dart';
+import '../utils/constants.dart' as constants;
 import '../widgets/app_drawer.dart';
 import '../widgets/badge.dart';
 import '../widgets/products_grid.dart';
@@ -66,7 +67,7 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
     //final productsContainer = Provider.of<Products>(context, listen: false);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('My Shop'),
+        title: Text(constants.appName),
         actions: [
           PopupMenuButton(
             onSelected: (FilterOptions selectedValue) {
