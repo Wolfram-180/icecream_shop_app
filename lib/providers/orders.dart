@@ -37,6 +37,9 @@ class Orders with ChangeNotifier {
     try {
       final response = await http.get(url);
       final List<OrderItem> loadedOrders = [];
+      if ((response.body == "null") || (response.body == null)) {
+        return;
+      }
       final extractedData = json.decode(response.body) as Map<String, dynamic>;
       if (extractedData == null) {
         return;

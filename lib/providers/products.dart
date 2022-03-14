@@ -203,6 +203,11 @@ class Products with ChangeNotifier {
 
     try {
       final response = await http.get(url);
+
+      if (response.body.contains('not parse')) {
+        return;
+      }
+
       final extractedData = json.decode(response.body) as Map<String, dynamic>;
       if (extractedData == null || extractedData == 'not found') {
         return;
