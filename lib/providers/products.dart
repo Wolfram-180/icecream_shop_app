@@ -204,7 +204,9 @@ class Products with ChangeNotifier {
     try {
       final response = await http.get(url);
 
-      if (response.body.contains('not parse')) {
+      if (response.body.contains('not parse') ||
+          response.body == 'null' ||
+          response.body == null) {
         return;
       }
 

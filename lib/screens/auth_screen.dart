@@ -293,7 +293,7 @@ class _AuthCardState extends State<AuthCard>
                       child: TextFormField(
                         enabled: _authMode == AuthMode.Signup,
                         decoration:
-                            InputDecoration(labelText: 'Подтвержденние пароля'),
+                            InputDecoration(labelText: 'Подтверждение пароля'),
                         obscureText: true,
                         validator: _authMode == AuthMode.Signup
                             ? (value) {
